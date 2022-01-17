@@ -80,6 +80,7 @@ export async function cli(
 ) {
   const options = parseArgs(args);
   const exampleFileContent = await getExampleContent(options.input);
+  const outputFileContent = await getOutputContent(options.output);
   const output = !ttyOutStream.isTTY
     ? ((ttyOutStream as unknown) as fs.WriteStream)
     : getOutputStream(options.output);
