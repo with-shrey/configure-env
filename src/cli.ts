@@ -47,8 +47,8 @@ export function parseArgs(args: string[]): CliArguments {
         desc: 'Location of input .env.example file for prompts',
       },
       verbose: { type: 'boolean', default: false },
-      useOutputFileDefaults: { type: 'boolean', default: false },
-      promptForExistingVars: { type: 'boolean', default: true },
+      useOutputFileDefaults: { type: 'boolean', default: true },
+      promptForExistingVars: { type: 'boolean', default: false },
     })
     .parse(args);
 
